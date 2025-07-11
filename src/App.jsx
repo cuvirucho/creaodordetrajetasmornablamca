@@ -28,8 +28,14 @@ const cargarPremios = async () => {
   // Al montar el componente, revisamos si hay cliente guardado
 useEffect(() => {
   const telefonoGuardado = localStorage.getItem('clienteRegistrado');
+  if (premios.length === 0) {
+    cargarPremios();
+    console.log('Cargando premios...');
+  }
+  
+  
+  
   if (telefonoGuardado) {
-cargarPremios();
 
     const unsubscribe = onSnapshot(doc(db, 'clientes', telefonoGuardado), (docSnap) => {
       if (docSnap.exists()) {
@@ -46,7 +52,7 @@ cargarPremios();
     return () => unsubscribe(); // limpiamos el listener cuando se desmonta el componente
   }
 }, []);
-console.log(cliente);
+
 
 
   const guardarCliente = async () => {
@@ -224,8 +230,7 @@ console.log(cliente);
 )}
 
 
-<button className="borrar" >
-  </button>
+
 
 
 

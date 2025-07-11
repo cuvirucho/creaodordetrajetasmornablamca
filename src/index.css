@@ -90,12 +90,13 @@ input:focus {
 
 button {
   padding: 12px 20px;
-  background-color: #ff0000;
+  background-color: #ffffff;
   color: rgb(0, 0, 0);
-  border: none;
+  border: solid 2px #000000;
   border-radius: 10px;
   font-size: 16px;
   cursor: pointer;
+  box-shadow: 0 4px 6px rgb(0, 0, 0);
   transition: background-color 0.3s, transform 0.2s;
   margin-top: 10px;
 }
@@ -103,6 +104,7 @@ button {
 button:hover {
   background-color: #d79a00;
   transform: scale(1.03);
+  color: #ffffff;
 }
 
 .qr-area {
