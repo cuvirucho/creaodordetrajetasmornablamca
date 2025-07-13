@@ -9,13 +9,154 @@
 
 
 :root {
-  --color-primario: #ffffff;
-  --color-secundario: #000000;
-  --color-texto: #333;
+  --color-primario: #f8eed6;
+  --color-secundario: #090c02;
+  --color-tersero: #8b4513;
+  --color-cuarto: #913028;
+  --color-quinto: #99b189;
+  --color-sexyo: #b66e5b;
+
+}
+
+
+
+@font-face {
+  font-family: 'TanHarmonie';
+  src: url('./assets/fonts/TanHarmoni-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+
+
+
+
+
+@font-face {
+  font-family: 'Brown Sugar';
+  src: url('./assets/fonts/brown-sugar.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@font-face {
+  font-family: 'High Mount';
+  src: url('./assets/fonts/HighMount-PersonalUse.otf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+
+
+@font-face {
+  font-family: 'Montserrat';
+  src: url('./assets/fonts/Montserrat-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.punotstext{
+  font-family: 'High Mount';
+  margin-left: 0%;
+  font-size: clamp(2rem, 2vw, 2.5rem);
+  margin-bottom: 5px;
+  text-align: center;
+  width: 45%;
+  background-color: rgba(255, 255, 0, 0);
+    color: var(--color-quinto);
+}
+
+
+.puntosttes{
+  color: var(--color-quinto);
+  font-size: clamp(2.9rem, 2vw, 2.5rem);
+  margin-bottom: 5px;
+  text-align: center;
+
+  
+}
+.CONTEPUTOS{
+  
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 5px;
+}
+
+
+
+
+
+.intrusicnparamas{
+  background-color: rgb(255, 255, 255);
+  font-size: 'Montserrat';
+  font-size: clamp(1.5rem, 2vw, 2.5rem);
+  margin-top: 15px;
+color: var(--color-tersero);
+}
+
+
+
+
+
+
+
+
+
+
+
+.tulotarjeta{
+  font-family: 'Brown Sugar';
+  font-size: clamp(1.9rem, 2vw, 2.5rem);
+  color: var(--color-sexyo);
+  margin-bottom: 5px;
+  text-align: center;
+
+  width: 100%;
+
+}
+
+.tulotarjetas{
+  font-family: 'Brown Sugar';
+  font-size: clamp(1.9rem, 2vw, 2.5rem);
+  color: var(--color-primario);
+  margin-bottom: 5px;
+  text-align: center;
+
+  width: 100%;
+
 }
 
 .bodyp {
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+ 
   background: linear-gradient(135deg, var(--color-primario), var(--color-secundario));
   margin: 0;
   padding: 0;
@@ -27,14 +168,16 @@
 }
 
 .contenedorcomo {
-  background: #000000;
+  background:var(--color-tersero);
+  font-family: 'TanHarmonie';
+   font-size: clamp(2rem, 2vw, 2.5rem);
 margin-bottom: 20px;
   padding: 30px;
   border-radius: 16px;
   box-shadow: 0 10px 30px rgb(0, 0, 0);
   width: 90%;
   max-width: 500px;
-  color: #ffffff;
+  color:var(--color-primario);
   text-align: center;
   display: flex;
   flex-direction: column;
@@ -42,9 +185,9 @@ margin-bottom: 20px;
     justify-content: start;
 }
 .contenedor {
-  background: #ffffff;
-margin-bottom: 20px;
-  padding: 30px;
+  background: var(--color-primario);
+
+  padding: 0px;
   border-radius: 16px;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
   width: 90%;
@@ -57,17 +200,17 @@ margin-bottom: 20px;
 }
 
 .logodellocal{
-    width: 50%;
-    max-width: 200px;
-    margin-bottom: 20px;
-    margin-top: 30px;
+    width: 100%;
+    max-width: 300px;
+    margin-bottom: -50px;
+    margin-top: -40px;
     border-radius: 10px;
 }
 
 
 .contenedor h2,
 .contenedor h3 {
-  color: #333;
+
   margin-bottom: 20px;
 }
 
@@ -108,18 +251,13 @@ button:hover {
 }
 
 .qr-area {
-  background-color: #fff9e6;
-  padding: 20px;
+
+  padding: 10px;
   border-radius: 12px;
-  border: 1px solid #cba6fc;
+  border: 1px solid var(--color-quinto) ;
   
 }
 
-.qr-area p {
-  margin: 8px 0;
-  font-size: 16px;
-  color: #555;
-}
 
 .qr-area img {
   margin-top: 10px;
@@ -137,8 +275,9 @@ button:hover {
 
 .premios h3 {
   text-align: center;
-  margin-bottom: 0px;
-  margin-top: 5px;
+font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+
+  font-size: clamp(1.2rem, 2vw, 2.5rem);
 
 }
 
@@ -182,8 +321,56 @@ max-width: 300px;
 
 
 .titulo{
-    font-size: clamp(1.8rem, 2vw, 2.5rem);
-
+    font-size: clamp(2rem, 2vw, 2.5rem);
+margin-top: 10px;
     margin-bottom: 5px;
     text-align: center;
+
+
+}
+
+.formulario{
+
+  padding: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  flex-direction: column;
+  border-radius: 20px;
+  margin-bottom: 10px;
+
+}
+
+
+/*carusen de prkoms*/
+
+.carrusel-container {
+  width: 100%;
+height: 300px;
+background: #f8b60000;
+height: auto;
+margin-top: 20px;
+}
+
+.carrusel-slider {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+ width: auto;
+  height: auto;
+  background-color: rgba(0, 255, 255, 0);
+  margin: 10px ;
+  overflow: hidden;
+overflow-x: auto;
+justify-content: space-between;
+gap: 20px;
+align-items: center;
+ padding: 10px;
+}
+
+.carrusel-img {
+  width: 100%;
+  border-radius: 80px;
+  max-height: 15rem;
+  min-height: 15rem;
+  object-fit: scale-down;
 }

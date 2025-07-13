@@ -15,6 +15,18 @@ function App() {
 const [premios, setPremios] = useState([]);
 
 
+
+
+
+const fotospormod = [
+  'https://res.cloudinary.com/db8e98ggo/image/upload/v1752427693/3_lsvlwn.png',
+  'https://res.cloudinary.com/db8e98ggo/image/upload/v1752427693/2_qw9pxm.png',
+  'https://res.cloudinary.com/db8e98ggo/image/upload/v1752427695/4_nkc2uq.png',
+  'https://res.cloudinary.com/db8e98ggo/image/upload/v1752427692/1_b84kdf.png',
+   
+]
+
+
 // Cargar premios desde Firebase al iniciar
 const cargarPremios = async () => {
   const snapshot = await getDocs(collection(db, 'premios'));
@@ -33,8 +45,10 @@ useEffect(() => {
     console.log('Cargando premios...');
   }
   
-  
-  
+   console.log('Teléfono guardado:', telefonoGuardado);
+    
+
+
   if (telefonoGuardado) {
 
     const unsubscribe = onSnapshot(doc(db, 'clientes', telefonoGuardado), (docSnap) => {
@@ -100,7 +114,7 @@ useEffect(() => {
    
      <img
             className='logodellocal'
-            src="https://res.cloudinary.com/db8e98ggo/image/upload/v1752169496/459036700_122101501928513503_3142647657257802548_n_thnzj7.jpg"
+            src="https://res.cloudinary.com/db8e98ggo/image/upload/v1752425938/Dise%C3%B1o_sin_t%C3%ADtulo_1_kutm4q.png"
             alt="Logo"
           />
 
@@ -142,7 +156,7 @@ useEffect(() => {
       (
     <section>
       <div>
-        Cada dolara gastado equivale a 100 puntos.
+        Cada dolara  equivale a 100 puntos.
       </div>
 
 
@@ -166,7 +180,7 @@ useEffect(() => {
 
    <div className="contenedor">
       {!registrado ? (
-        <>
+        <section className="formulario">
         <p className="titulo">Crea tu tarjeta de fidelidad</p>
           <input
             placeholder="Nombre"
@@ -179,18 +193,25 @@ useEffect(() => {
             onChange={(e) => setCliente({ ...cliente, telefono: e.target.value })}
           />
           <button onClick={guardarCliente}>Crear Tarjeta</button>
-        </>
+        </section>
       ) 
       : (
         <div className="qr-area">
-          <h2>¡Felisidades {cliente.nombre}  tu tarjeta está lista!</h2>
-          <p><strong>Puntos:</strong> {cliente.puntos}</p>
+          <h2 className='tulotarjeta'   >¡Felicidades {cliente.nombre}  tu tarjeta está lista!</h2>
+          <div  className='CONTEPUTOS' >
+
+          <p className='punotstext'    >   <strong>Puntos:</strong></p>
+          <p className='puntosttes'    >{cliente.puntos}</p>
+       
+          </div>
+       
        <QRCodeSVG
   size={200}
+ fgColor="#8b4513"
   value={`${cliente.telefono}|${cliente.token}`}
 />
 
-          <p>Muéstralo en el local para sumar tus punotos</p>
+          <p className='intrusicnparamas'   >Muéstralo en el local para sumar tus puntos</p>
         </div>
       )}
 
@@ -211,14 +232,14 @@ useEffect(() => {
             style={{
         
               opacity: yaReclamado ? 0.5 : 1,
-              border: yaReclamado ? '1px solid red' : 'none',
+              border: yaReclamado ? '1px solid #913028' : 'none',
             
             }}
           >
             <div>
               <p>{premio.nombre} - {premio.costo} puntos   </p> 
               {yaReclamado && (
-                <p style={{ color: 'red' }}>Ya reclamado</p>
+                <p style={{ color: '#913028' }}>Ya reclamado</p>
               )}
             </div>
           </li>
@@ -236,6 +257,33 @@ useEffect(() => {
 
     </div>
   
+
+
+
+
+
+  <div className="carrusel-container">
+     <h2 className='tulotarjetas'   >Disfruta también de nuestras promociones</h2>
+      <div
+        className="carrusel-slider"
+      >
+        {fotospormod.map((foto, i) => (
+          <img key={i} src={foto} alt={`foto-${i}`} className="carrusel-img" />
+        ))}
+      </div>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
 
    </section>
 
