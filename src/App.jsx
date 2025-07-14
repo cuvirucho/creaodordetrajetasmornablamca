@@ -1,4 +1,4 @@
-import { collection, doc, getDocs, onSnapshot, setDoc } from 'firebase/firestore';
+import { collection, doc, getDoc, getDocs, onSnapshot, setDoc } from 'firebase/firestore';
 import { QRCodeSVG } from 'qrcode.react';
 import React, { useState, useEffect } from 'react';
 import { db } from './Firebase';
@@ -70,27 +70,52 @@ useEffect(() => {
 }, []);
 
 
+const [mensajeInfo, setMensajeInfo] = useState('');
 
-  const guardarCliente = async () => {
-    const id = cliente.telefono.trim();
-    if (!id || !cliente.nombre.trim()) return alert('Completa todos los campos');
 
-    const token = generarToken(); // generamos token único
-    const nuevoCliente = { ...cliente, puntos: 0, token ,reclamados: []};
 
-    localStorage.setItem(id, JSON.stringify(nuevoCliente));
-    localStorage.setItem('clienteRegistrado', id); // Guardamos el teléfono
-    setCliente(nuevoCliente);
-    setRegistrado(true);
+const guardarCliente = async () => {
+  const id = cliente.telefono.trim();
+  if (!id || !cliente.nombre.trim()) {
+    setMensajeInfo('Por favor completa todos los campos.');
+    return;
+  }
 
-    try {
-      await setDoc(doc(db, 'clientes', id), nuevoCliente);
-    } catch (error) {
-      console.error('Error al guardar:', error);
+  try {
+    const docRef = doc(db, 'clientes', id);
+    const docSnap = await getDoc(docRef);
+
+    if (docSnap.exists()) {
+      const data = docSnap.data();
+      setCliente(data);
+      console.log('Cliente ya registrado:', data);
+      
+      setRegistrado(true);
+      localStorage.setItem(id, JSON.stringify(data));
+      localStorage.setItem('clienteRegistrado', id);
+      setMensajeInfo(`Hola de nuevo, ${data.nombre}. Ya tienes una tarjeta registrada y hemos cargado tus datos.`);
+    } else {
+      const token = generarToken();
+      const nuevoCliente = {
+        ...cliente,
+        puntos: 0,
+        token,
+        reclamados: [],
+      };
+
+      await setDoc(docRef, nuevoCliente);
+      setCliente(nuevoCliente);
+      setRegistrado(true);
+      localStorage.setItem(id, JSON.stringify(nuevoCliente));
+      localStorage.setItem('clienteRegistrado', id);
+      setMensajeInfo('¡Tu tarjeta ha sido creada con éxito!');
     }
-  };
+  } catch (error) {
+    console.error('Error al verificar o guardar cliente:', error);
+    setMensajeInfo('Hubo un error al guardar tu tarjeta. Intenta nuevamente.');
+  }
+};
 
- 
  
  
  
@@ -186,17 +211,6 @@ className='txtoinixcal'
 
     </div>
   
-
-
-
-
-
-
-
-
-
-
-
 
 
 
