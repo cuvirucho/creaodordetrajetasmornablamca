@@ -19,10 +19,9 @@ const [premios, setPremios] = useState([]);
 
 
 const fotospormod = [
-  'https://res.cloudinary.com/db8e98ggo/image/upload/v1752427693/3_lsvlwn.png',
-  'https://res.cloudinary.com/db8e98ggo/image/upload/v1752427693/2_qw9pxm.png',
-  'https://res.cloudinary.com/db8e98ggo/image/upload/v1752427695/4_nkc2uq.png',
-  'https://res.cloudinary.com/db8e98ggo/image/upload/v1752427692/1_b84kdf.png',
+  'https://res.cloudinary.com/db8e98ggo/image/upload/v1752506891/PROMO_VIE_SAB_CORONA_tpppbk.png',
+  'https://res.cloudinary.com/db8e98ggo/image/upload/v1752506892/PROMO_MIE_JUE_MARGARITAS_ktxupl.png',
+  'https://res.cloudinary.com/db8e98ggo/image/upload/v1752506892/PROMO_MARTES_MOJITO_hkn7yk.png',
    
 ]
 
