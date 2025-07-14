@@ -129,7 +129,7 @@ useEffect(() => {
 
         {premios.length > 0 && (
   <div className="premios">
-    <h3>Premios Disponibles</h3>
+    <h3     >Premios Disponibles</h3>
     <ul>
       {premios.map((premio) => {
       
@@ -156,7 +156,7 @@ useEffect(() => {
       (
     <section>
       <div>
-        Cada dolara  equivale a 100 puntos.
+        Cada $5 equivale a 100 puntos.
       </div>
 
 
@@ -197,7 +197,14 @@ useEffect(() => {
       ) 
       : (
         <div className="qr-area">
-          <h2 className='tulotarjeta'   >¡Felicidades {cliente.nombre}  tu tarjeta está lista!</h2>
+   <div className="datodcleite">
+  <h2 className="tulotarjeta">
+    ¡Felicidades <span className="tulotarjetanombreclite">{cliente.nombre}</span> tu tarjeta está lista!
+  </h2>
+</div>
+
+
+
           <div  className='CONTEPUTOS' >
 
           <p className='punotstext'    >   <strong>Puntos:</strong></p>
