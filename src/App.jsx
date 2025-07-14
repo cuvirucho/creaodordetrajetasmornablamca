@@ -22,6 +22,9 @@ const fotospormod = [
   'https://res.cloudinary.com/db8e98ggo/image/upload/v1752506891/PROMO_VIE_SAB_CORONA_tpppbk.png',
   'https://res.cloudinary.com/db8e98ggo/image/upload/v1752506892/PROMO_MIE_JUE_MARGARITAS_ktxupl.png',
   'https://res.cloudinary.com/db8e98ggo/image/upload/v1752506892/PROMO_MARTES_MOJITO_hkn7yk.png',
+  'https://res.cloudinary.com/db8e98ggo/image/upload/v1752529498/DECIMO_COCTEL_GRATIS_wcct2v.png',
+  'https://res.cloudinary.com/db8e98ggo/image/upload/v1752529499/HAPPY_HOUR_n1esqx.png',
+  'https://res.cloudinary.com/db8e98ggo/image/upload/v1752529499/DECIMO_CAFE_GRATIS_qcbcaa.png',
    
 ]
 
@@ -117,18 +120,27 @@ useEffect(() => {
             alt="Logo"
           />
 
+<p
+className='txtoinixcal'
+>
+  Premiamos tu amor por   lo delicioso y lindo de Cuenca</p>
+
    <div className="contenedorcomo">
       {!registrado ? (
         <>
-        <p className="titulo">Como funciona</p>
-        <p>1. Completa tus datos.</p>
-        <p>2. Recibe tu tarjeta de fidelidad gratis.</p>
-        <p>3. Acumula puntos por cada compra.</p>
-        <p>4. Canjea tus puntos por premios.</p>
+        <p className="titulo">¿Como funciona?</p>
+       
+       <div className="contenedorcomotexto">
 
+        <p  className='cmotex'  >1. Completa tus datos.</p>
+        <p className='cmotex'  >2. Recibe tu tarjeta de fidelidad gratis.</p>
+        <p className='cmotex'  >3. Acumula puntos por cada compra.</p>
+        <p className='cmotex'  >4. Canjea tus puntos por premios.</p>
+
+       </div>
         {premios.length > 0 && (
   <div className="premios">
-    <h3     >Premios Disponibles</h3>
+    <p className='premiosh3'  >Premios Disponibles</p>
     <ul>
       {premios.map((premio) => {
       
@@ -136,11 +148,11 @@ useEffect(() => {
           <li
             key={premio.id}
           >
-            <div>
+           
               
-              <p>{premio.nombre} </p> 
+              <p  className='itempreitext' >{premio.nombre} </p> 
          
-            </div>
+           
           </li>
         );
       })}
@@ -177,10 +189,30 @@ useEffect(() => {
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
    <div className="contenedor">
       {!registrado ? (
         <section className="formulario">
-        <p className="titulo">Crea tu tarjeta de fidelidad</p>
+        <p className="titulocra">Crea tu tarjeta </p>
+         <p
+className='txtocratarjr'
+>
+  Y recibe premios por tu fidelidad</p>
+
+         
           <input
             placeholder="Nombre"
             value={cliente.nombre}
@@ -227,7 +259,7 @@ useEffect(() => {
 
 {registrado && premios.length > 0 && (
   <div className="premios">
-    <h3>Premios Disponibles</h3>
+    <h3 className='premiosh3'  >Premios Disponibles</h3>
     <ul>
       {premios.map((premio) => {
         const yaReclamado = cliente.reclamados.includes(premio.nombre);
