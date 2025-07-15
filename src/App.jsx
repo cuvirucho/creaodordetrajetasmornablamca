@@ -218,7 +218,8 @@ className='txtoinixcal'
 
 
    <div className="contenedor">
-      {!registrado ? (
+      {!registrado ? 
+      (
         <section className="formulario">
         <p className="titulocra">Crea tu tarjeta </p>
          <p
@@ -240,11 +241,15 @@ className='txtocratarjr'
           <button onClick={guardarCliente}>Crear Tarjeta</button>
         </section>
       ) 
-      : (
-        <div className="qr-area">
+      :
+      (
+      
+      
+      <div className="qr-area">
+   
    <div className="datodcleite">
   <h2 className="tulotarjeta">
-    ¡Felicidades <span className="tulotarjetanombreclite">{cliente.nombre}</span> tu tarjeta está lista!
+    ¡Felicidades <span className="tulotarjetanombreclite">{cliente.nombre}</span>, tu tarjeta está lista!
   </h2>
 </div>
 
@@ -264,7 +269,12 @@ className='txtocratarjr'
 />
 
           <p className='intrusicnparamas'   >Muéstralo en el local para sumar tus puntos</p>
-        </div>
+      
+      
+      </div>
+      
+      
+      
       )}
 
   
@@ -285,7 +295,8 @@ className='txtocratarjr'
         
               opacity: yaReclamado ? 0.5 : 1,
               border: yaReclamado ? '1px solid #913028' : 'none',
-            
+              backgroundColor: yaReclamado ? '#f8d7da' : '#8b4513',
+              color: yaReclamado ? '#000000ff' : '#f8eed6',
             }}
           >
             <div>
@@ -335,7 +346,9 @@ className='txtocratarjr'
 
 
 
-
+<div className="foo"   >
+  
+</div>
 
    </section>
 

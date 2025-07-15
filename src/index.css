@@ -139,12 +139,12 @@ border-radius: 20px;
 
 
 .tulotarjeta{
-  font-size: 'Montserrat';
-  font-size: clamp(1.5rem, 2vw, 2.5rem);
+ font-family: 'Montserrat', sans-serif;
+  font-size: clamp(1.2rem, 2vw, 2.5rem);
   color: var(--color-sexyo);
   margin-bottom: 5px;
   text-align: center;
-font-weight: 100;
+font-weight: 400;
   width: 100%;
   background-color: #d79a0000;
 
@@ -450,4 +450,7 @@ margin-left: 15px;
   font-style: italic;
   font-family: 'Montserrat', sans-serif;
 transform: translate(-0%, -0%);
+}
+.foo{
+  height: 90px;
 }
