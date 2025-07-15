@@ -300,10 +300,14 @@ className='txtocratarjr'
             }}
           >
             <div>
-              <p  className='texpremio' >{premio.nombre}  {premio.costo} puntos   </p> 
-              {yaReclamado && (
-                <p style={{ color: '#913028' }}>Ya reclamado</p>
-              )}
+              <p  className='texpremio' > - {premio.costo} puntos  - </p> 
+              <p  className='texpremio' >{premio.nombre}   </p> 
+              
+              {yaReclamado && (   
+         <p style={{ color: '#913028' }}>Ya reclamado</p>
+             )}
+           
+           
             </div>
           </li>
         );
