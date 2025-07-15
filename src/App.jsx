@@ -257,8 +257,8 @@ className='txtocratarjr'
 
           <div  className='CONTEPUTOS' >
 
-          <p className='punotstext'    >   <strong>Puntos:</strong></p>
-          <p className='puntosttes'    >{cliente.puntos}</p>
+          <p className='punotstext'    >   <strong>Puntos: </strong></p>
+          <p className='puntosttes'    > {cliente.puntos} </p>
        
           </div>
        
