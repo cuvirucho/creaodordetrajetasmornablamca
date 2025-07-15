@@ -258,7 +258,7 @@ className='txtocratarjr'
           </div>
        
        <QRCodeSVG
-  size={200}
+  size={150}
  fgColor="#8b4513"
   value={`${cliente.telefono}|${cliente.token}`}
 />
@@ -289,7 +289,7 @@ className='txtocratarjr'
             }}
           >
             <div>
-              <p>{premio.nombre} - {premio.costo} puntos   </p> 
+              <p  className='texpremio' >{premio.nombre}  {premio.costo} puntos   </p> 
               {yaReclamado && (
                 <p style={{ color: '#913028' }}>Ya reclamado</p>
               )}

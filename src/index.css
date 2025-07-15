@@ -86,11 +86,9 @@
 
 .punotstext{
   font-size: 'Montserrat';
-  margin-left: 0%;
-  font-size: clamp(2.3em, 2vw, 2.5rem);
-  margin-bottom: 5px;
+  font-size: clamp(1.3rem, 1vw, 2.5rem);
+
   text-align: center;
-  width: 49%;
   background-color: rgba(238, 238, 12, 0);
     color: var(--color-quinto);
     font-weight: 200;
@@ -99,18 +97,21 @@
 
 .puntosttes{
   color: var(--color-quinto);
-  font-size: clamp(2.3rem, 2vw, 2.5rem);
-  margin-bottom: 5px;
+  font-size: clamp(1.3rem, 1vw, 2.5rem);
+
   text-align: center;
+background-color: #8b451300;
+
 
   
 }
 .CONTEPUTOS{
-  
+  background-color: rgba(188, 143, 143, 0);
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-bottom: 5px;
+  margin-bottom: 10px;
+  margin-top: -5px;
 }
 
 
@@ -118,9 +119,10 @@
 
 
 .intrusicnparamas{
-  background-color: rgb(255, 255, 255);
+  background-color: rgba(255, 255, 255, 0);
   font-size: 'Montserrat';
-  font-size: clamp(1.5rem, 2vw, 2.5rem);
+  font-size: clamp(1rem, 2vw, 2.5rem);
+  font-style: italic;
   margin-top: 15px;
 color: var(--color-tersero);
 border-radius: 20px;
@@ -138,12 +140,13 @@ border-radius: 20px;
 
 .tulotarjeta{
   font-size: 'Montserrat';
-  font-size: clamp(2.1rem, 2vw, 2.5rem);
+  font-size: clamp(1.5rem, 2vw, 2.5rem);
   color: var(--color-sexyo);
   margin-bottom: 5px;
   text-align: center;
-font-weight: 400;
+font-weight: 100;
   width: 100%;
+  background-color: #d79a0000;
 
 }
 
@@ -267,7 +270,7 @@ button:hover {
 }
 
 .premios {
-  margin-top: 30px;
+  margin-top: 20px;
   text-align: left;
    font-family: 'Montserrat', sans-serif;
     width: 100%;
@@ -279,7 +282,7 @@ button:hover {
 .premiosh3 {
   text-align: center;
   font-family: 'Brown Sugar';
-  font-size: clamp(1.2rem, 2vw, 2.5rem);
+  font-size: clamp(1.4rem, 2vw, 2.5rem);
 
 }
 
@@ -293,22 +296,31 @@ button:hover {
   padding: 10px;
   overflow: hidden;
   overflow-x: auto;
+  margin-top: -15px;
 }
 
 .premios li {
-   background-color: var(--color-primario);
+   background-color:var(--color-tersero);
 min-width: 150px;
 max-width: 300px;
-  padding: 5px;
-  color: #131313;
+  padding: 12px;
+
+  color: var(--color-primario);
   border-radius: 12px;
   display: flex;
   text-align: center;
   align-items: center;
   justify-content:center;
-  transition: transform 0.2s;
+  
 }
+.texpremio{
 
+  font-size: clamp(0.8rem, 2vw, 2.5rem);
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+    text-align: center;
+
+}
 
 
 .itempreitext{
