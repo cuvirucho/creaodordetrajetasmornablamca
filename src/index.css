@@ -453,4 +453,33 @@ transform: translate(-0%, -0%);
 }
 .foo{
   height: 90px;
+  background-color: #91312800;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+padding: 15px;
+  flex-direction: column;
+
+
+}
+.fimar1{
+  background-color: #99b18900;
+    font-size: clamp(0.55rem, 2vw, 2.5rem);
+      font-style: italic;
+  font-family: 'Montserrat', sans-serif;
+  margin-top: 2px;
+  color:antiquewhite ;
+}
+.fimar1bt2{
+margin-top: -0px;
+  border: none;
+  padding: 5px;
+  box-shadow: none;
+    background-color: #99b18900;
+    font-size: clamp(0.6rem, 2vw, 2.5rem);
+      font-style: italic;
+  font-family: 'Montserrat', sans-serif;
+  cursor: pointer;
+  color:antiquewhite ;
 }

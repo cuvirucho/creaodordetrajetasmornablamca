@@ -354,7 +354,20 @@ className='txtocratarjr'
 
 
 <div className="foo"   >
-  
+  <p  className='fimar1'  >TRISKEL</p>
+  <p  className='fimar1'    >Obten tu propia web </p>
+
+   <button
+    className='fimar1bt2'
+    onClick={() => {
+      const mensaje = encodeURIComponent("Hola, quiero más información sobre la web");
+      const numero = "593963200325"; // Reemplaza con tu número de WhatsApp (con código de país)
+      window.open(`https://wa.me/${numero}?text=${mensaje}`, "_blank");
+    }}
+  >
+    Más info
+  </button>
+
 </div>
 
    </section>
