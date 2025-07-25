@@ -75,7 +75,8 @@ const [mensajeInfo, setMensajeInfo] = useState('');
 
 
 const guardarCliente = async () => {
-  const id = cliente.telefono.trim();
+  const id = cliente.telefono.replace(/\s+/g, ''); // Elimina todos los espacios
+
   if (!id || !cliente.nombre.trim()) {
     setMensajeInfo('Por favor completa todos los campos.');
     return;
@@ -236,7 +237,9 @@ className='txtocratarjr'
           <input
             placeholder="Teléfono"
             value={cliente.telefono}
-            onChange={(e) => setCliente({ ...cliente, telefono: e.target.value })}
+            onChange={(e) => setCliente({ ...cliente,
+              telefono: e.target.value.replace(/\s+/g, '') // elimina espacios mientras escribe
+              })}
           />
           <button onClick={guardarCliente}>Crear Tarjeta</button>
         </section>
